@@ -58,30 +58,26 @@ document.addEventListener('DOMContentLoaded', function() {
         datumm.textContent = 'Momentalni datum: ' + sdatum;
     })
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const pricitButton = document.getElementById('pricitButton');
+function pricist3() {
+    const cislo = parseFloat(document.getElementById("cislo").value);
+    const vysledek = cislo + 3; 
+    document.getElementById("vysledek2").innerText = "výsledek: " + vysledek;
+}
 
-    pricitButton.addEventListener('click', function() {
-        const input = document.getElementById('numberInput').value; // Získání hodnoty z inputu
-        const cislo = parseFloat(input); // Převod na číslo
 
-        if (!isNaN(cislo)) { // Kontrola, zda je to číslo
-            const vysledek = cislo + 3; // Přičtení 3
-            document.getElementById('vysledek').textContent = 'Výsledek: ' + vysledek; // Zobrazení výsledku
-        } else {
-            document.getElementById('vysledek').textContent = 'Prosím, zadej platné číslo.'; // Chybová zpráva
-        }
-    });
-});
+function hodnoty() {
+    const cislo1 = parseFloat(document.getElementById("č.1").value);
+    const cislo2 = parseFloat(document.getElementById("č.2").value);
+    const vysledek4 = cislo1 + cislo2;
+    document.getElementById("vysledek3").innerText = "výsledek: " + vysledek4;
+}
 
-const soucetButton = document.getElementById('soucetButton');
+const img = document.getElementById("myImage");
 
-soucetButton.addEventListener('click', () => {
-    const cislo1 = parseFloat(document.getElementById('numberInput1').value);
-    const cislo2 = parseFloat(document.getElementById('numberInput2').value);
-    const vysledek = cislo1 + cislo2 
-    ? 'Prosím, zadejte platné číslo v obou polích.' 
-    : 'Výsledek: ' + (cislo1 + cislo2);
-    
-    document.getElementById('vysledekSoucet').textContent = vysledek;
-});
+        img.addEventListener("mouseenter", function() {
+            img.width = 240; 
+        });
+
+        img.addEventListener("mouseleave", function() {
+            img.width = 200; 
+        });
