@@ -72,12 +72,16 @@ function hodnoty() {
     document.getElementById("vysledek3").innerText = "výsledek: " + vysledek4;
 }
 
+const img = document.getElementById("obrázek");
+
+<script>
 const img = document.getElementById("myImage");
 
-        img.addEventListener("mouseenter", function() {
-            img.width = 240; 
-        });
+img.addEventListener("mouseenter", function() {
+    img.width = 240; // Zvětšení obrázku
+});
 
-        img.addEventListener("mouseleave", function() {
-            img.width = 200; 
-        });
+img.addEventListener("mouseleave", function() {
+    img.width = 200; // Obnovení původní velikosti
+});
+</script>
