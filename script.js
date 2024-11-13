@@ -83,3 +83,17 @@ const img = document.getElementById("obrazek");
         img.addEventListener("mouseleave", function() {
             img.style.transform = "scale(1)";  
         });
+        function addTask() {
+            const taskInput = document.getElementById("taskInput");
+            const taskText = taskInput.value.trim();
+        
+            const li = document.createElement("li");
+            li.textContent = taskText;
+        
+            li.onclick = function() {
+                li.remove();
+            };
+        
+            document.getElementById("tasks").appendChild(li);
+            taskInput.value = "";
+        }
